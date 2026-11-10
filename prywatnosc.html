@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Polityka prywatności prywatnej konfiguracji OAuth rclone KDE — dostęp do Google Drive, lokalne przechowywanie tokenów i zarządzanie zgodą.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Polityka prywatności — rclone KDE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="rclone KDE — strona główna"><span class="mark" aria-hidden="true">R</span> rclone KDE</a>
+      <nav aria-label="Nawigacja"><a href="prywatnosc.html" aria-current="page">Polityka prywatności</a><a href="warunki.html">Warunki korzystania</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Ochrona danych</p>
+        <h1>Polityka prywatności</h1>
+        <p class="lead">Ta polityka opisuje prywatne użycie Google Drive API przez narzędzie rclone oraz sposób przechowywania danych podczas korzystania z tej konfiguracji OAuth.</p>
+        <p class="note">Ostatnia aktualizacja: 10 listopada 2026 r.</p>
+      </section>
+      <section>
+        <h2>1. Cel i charakter rozwiązania</h2>
+        <p>„rclone KDE” jest nazwą prywatnej konfiguracji OAuth używanej na komputerze z systemem Linux. Nie jest odrębną usługą internetową, nie udostępnia kont innym osobom i nie świadczy komercyjnej usługi przechowywania danych.</p>
+      </section>
+      <section>
+        <h2>2. Jakie dane mogą być przetwarzane?</h2>
+        <p>Po wyrażeniu zgody przez właściciela konta program rclone może uzyskać dostęp do zawartości Dysku Google, w tym nazw plików i folderów, metadanych oraz treści plików. Jeśli użytkownik przyzna pełny zakres <code>https://www.googleapis.com/auth/drive</code>, obejmuje on możliwość odczytu, tworzenia, zmieniania i usuwania plików.</p>
+        <p>Dane są wykorzystywane wyłącznie do operacji zleconych przez użytkownika, np. wyświetlenia listy katalogów, otwarcia dokumentu, przesłania lub usunięcia pliku.</p>
+      </section>
+      <section>
+        <h2>3. Przechowywanie i przepływ danych</h2>
+        <ul>
+          <li>Logowanie OAuth odbywa się z udziałem Google i lokalnie uruchomionego programu rclone.</li>
+          <li>Tokeny autoryzacyjne oraz ustawienia połączenia są przechowywane na komputerze użytkownika w lokalnym pliku konfiguracji rclone, standardowo <code>~/.config/rclone/rclone.conf</code>.</li>
+          <li>Przy montowaniu Dysku rclone może korzystać z lokalnej pamięci podręcznej i zapisywać tymczasowe kopie odczytywanych lub zmienianych plików, zależnie od ustawień.</li>
+          <li>Właściciel tej strony nie uruchamia osobnego serwera pośredniczącego w transferze danych Google Drive. Transfer plików odbywa się między komputerem użytkownika a usługą Google.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>4. Udostępnianie danych</h2>
+        <p>Konfiguracja nie jest przeznaczona do sprzedaży danych, reklam, profilowania ani przekazywania zawartości Dysku Google niezależnym podmiotom. Dane mogą trafiać do lokalnych programów lub usług wybranych przez użytkownika, jeśli ten samodzielnie uruchomi takie operacje. Korzystanie z danych z API Google ogranicza się do opisanych tutaj celów i podlega zasadom Google API Services User Data Policy, w tym odpowiednim wymogom Limited Use.</p>
+      </section>
+      <section>
+        <h2>5. Witryna informacyjna i pliki cookie</h2>
+        <p>Ta witryna jest statyczna: nie zawiera własnych formularzy logowania, skryptów analitycznych, reklam ani mechanizmów śledzących. Jest hostowana przez GitHub Pages. Operator hostingu może przetwarzać podstawowe dane techniczne związane z obsługą żądań HTTP, zgodnie ze swoją <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">polityką prywatności</a>.</p>
+      </section>
+      <section>
+        <h2>6. Cofnięcie zgody i usunięcie dostępu</h2>
+        <p>Zgodę można cofnąć w dowolnym momencie w <a href="https://myaccount.google.com/connections">ustawieniach połączeń konta Google</a>. Lokalny dostęp można dodatkowo usunąć w <code>rclone config</code>, kasując odpowiednie połączenie, a także usuwając niepotrzebną pamięć podręczną. Cofnięcie zgody nie usuwa automatycznie plików uprzednio pobranych na komputer.</p>
+      </section>
+      <section class="panel">
+        <h2>7. Kontakt</h2>
+        <p>Projekt jest prowadzony prywatnie przez właściciela profilu GitHub <a href="https://github.com/siekier">siekier</a>. Pytania dotyczące treści tej strony można zgłaszać przez <a href="https://github.com/siekier/rclone-kde/issues">Issues w repozytorium projektu</a>, o ile ta funkcja jest włączona.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Projekt prywatny · rclone KDE</span>
+      <nav aria-label="Stopka"><a href="./">Strona główna</a><a href="prywatnosc.html">Prywatność</a><a href="warunki.html">Warunki</a></nav>
+    </footer>
+  </div>
+</body>
+</html>

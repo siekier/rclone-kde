@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="rclone KDE — prywatna konfiguracja OAuth do korzystania z własnego Dysku Google w systemie Linux i menedżerze plików Dolphin.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>rclone KDE — prywatny dostęp do Dysku Google</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="rclone KDE — strona główna"><span class="mark" aria-hidden="true">R</span> rclone KDE</a>
+      <nav aria-label="Nawigacja"><a href="prywatnosc.html">Polityka prywatności</a><a href="warunki.html">Warunki korzystania</a></nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Projekt prywatny · Linux / KDE Plasma</p>
+        <h1>Własny Dysk Google w Dolphinie</h1>
+        <p class="lead">rclone KDE to nazwa prywatnej konfiguracji OAuth używanej do połączenia programu rclone z kontem Google Drive na komputerze z systemem Linux.</p>
+        <p>To nie jest osobna aplikacja ani usługa chmurowa dostępna dla innych użytkowników. Konfiguracja pozwala korzystać z własnych plików przez menedżer plików Dolphin, z użyciem rclone i FUSE.</p>
+      </section>
+      <section class="panel" aria-labelledby="dzialanie">
+        <h2 id="dzialanie">Jak działa połączenie</h2>
+        <ol>
+          <li>Użytkownik uruchamia <strong>rclone</strong> na swoim komputerze i loguje się na wybrane konto Google przez oficjalny mechanizm OAuth.</li>
+          <li>Po udzieleniu zgody rclone może odczytywać, tworzyć, modyfikować i usuwać pliki na Dysku Google, zgodnie z przyznanymi uprawnieniami.</li>
+          <li>Folder Google Drive jest montowany lokalnie za pomocą FUSE i może być otwierany w Dolphinie.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Dostęp do danych Google</h2>
+        <p>Konfiguracja korzysta z Google Drive API i może żądać zakresu <code>https://www.googleapis.com/auth/drive</code>, który zapewnia szeroki dostęp do plików na autoryzowanym koncie. Operacje wykonywane są wyłącznie na polecenie użytkownika, w ramach działania programu rclone.</p>
+        <p>Tokeny autoryzacyjne są przechowywane lokalnie przez rclone. Ta witryna nie prowadzi logowania, nie przyjmuje tokenów i nie przesyła plików z Dysku na serwer właściciela strony.</p>
+        <div class="links">
+          <a href="prywatnosc.html">Jak przetwarzane są dane</a>
+          <a href="warunki.html">Warunki użytkowania</a>
+        </div>
+      </section>
+      <section>
+        <h2>O projekcie</h2>
+        <p>Strona informacyjna dotyczy prywatnej konfiguracji właściciela konta GitHub <a href="https://github.com/siekier">siekier</a>. rclone jest niezależnym narzędziem open source. Projekt nie jest produktem Google, KDE ani twórców rclone i nie jest przez nich sponsorowany.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Projekt prywatny · rclone KDE</span>
+      <nav aria-label="Stopka"><a href="./">Strona główna</a><a href="prywatnosc.html">Prywatność</a><a href="warunki.html">Warunki</a></nav>
+    </footer>
+  </div>
+</body>
+</html>
